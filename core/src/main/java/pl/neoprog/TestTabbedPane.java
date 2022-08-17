@@ -8,7 +8,7 @@ import com.kotcrab.vis.ui.widget.VisWindow;
 import com.kotcrab.vis.ui.widget.tabbedpane.Tab;
 import com.kotcrab.vis.ui.widget.tabbedpane.TabbedPane;
 import com.kotcrab.vis.ui.widget.tabbedpane.TabbedPaneAdapter;
-
+// TODO change to KVisWindow.
 public class TestTabbedPane extends VisWindow {
 
 	public TestTabbedPane () {
