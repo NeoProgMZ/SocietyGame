@@ -1,10 +1,10 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch
-import com.darkgravity.khexgrid.map.HexagonalMap
-import com.darkgravity.khexgrid.map.HexagonalTile
-import com.darkgravity.khexgrid.map.Terrain
-import com.darkgravity.khexgrid.map.TerrainView
+import pl.neoprog.khexgrid.map.HexagonalMap
+import pl.neoprog.khexgrid.map.HexagonalTile
+import pl.neoprog.khexgrid.map.Terrain
+import pl.neoprog.khexgrid.map.TerrainView
 
 /**
  * @author Dan McCabe

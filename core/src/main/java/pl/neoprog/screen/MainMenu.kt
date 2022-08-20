@@ -12,17 +12,13 @@ import com.kotcrab.vis.ui.widget.Menu
 import com.kotcrab.vis.ui.widget.MenuBar
 import com.kotcrab.vis.ui.widget.MenuItem
 import ktx.actors.stage
-import ktx.app.KtxGame
 import ktx.app.KtxScreen
-import pl.neoprog.TestCollapsible
-import pl.neoprog.TestListView
-import pl.neoprog.TestTabbedPane
-import pl.neoprog.TestWindow
 import com.badlogic.gdx.Input
 import ktx.scene2d.actors
 import ktx.scene2d.vis.*
+import pl.neoprog.*
 
-class MainMenu(val game: KtxGame<KtxScreen>) : KtxScreen {
+class MainMenu(val game: SocietyGame) : KtxScreen {
 //    private val mainMenuBar: MenuBar by lazy { MenuBar() }
     private val stage: Stage by lazy { stage(viewport = ScreenViewport()) }
 

@@ -1,32 +1,38 @@
 package pl.neoprog.screen
 
 import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch
-import com.badlogic.gdx.math.Vector2
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.utils.viewport.ScreenViewport
-import com.darkgravity.khexgrid.map.*
-import com.darkgravity.khexgrid.math.OffsetCoordinate
-import com.darkgravity.khexgrid.math.OffsetCoordinateType
-import com.darkgravity.khexgrid.render.HexagonalRenderer
-import com.darkgravity.khexgrid.render.LayeredRenderer
-import com.darkgravity.khexgrid.render.TerrainLayer
-import com.darkgravity.khexgrid.render.TileOutlineLayer
+import pl.neoprog.khexgrid.math.OffsetCoordinate
+import pl.neoprog.khexgrid.math.OffsetCoordinateType
+import pl.neoprog.khexgrid.render.HexagonalRenderer
+import pl.neoprog.khexgrid.render.LayeredRenderer
+import pl.neoprog.khexgrid.render.TerrainLayer
+import pl.neoprog.khexgrid.render.TileOutlineLayer
 import ktx.actors.stage
-import ktx.app.KtxGame
 import ktx.app.KtxScreen
 import ktx.math.ImmutableVector2
+import pl.neoprog.SocietyGame
+import pl.neoprog.assets.TextureAtlasAssets
+import pl.neoprog.assets.get
+import pl.neoprog.khexgrid.map.*
 import pl.neoprog.terrain.Grass
 
 
-class Game(val game: KtxGame<KtxScreen>) : KtxScreen {
-    private val stage: Stage by lazy { stage(viewport = ScreenViewport()) }
-    private val columns: Int = 10;
-    private val rows: Int = 10;
+class Game(private val game: SocietyGame) : KtxScreen {
+    private val stage: Stage by lazy { stage(viewport = ScreenViewport(), batch = PolygonSpriteBatch()) }
+    private val columns: Int = 10
+    private val rows: Int = 10
+    private val terrainLayer: TerrainLayer
+    private val tileOutlinerLayer: TileOutlineLayer
+    private val renderer: LayeredRenderer
 
     init {
-        var mapLayout = HexagonalLayout(
+        val mapLayout = HexagonalLayout(
             HexagonalOrientation.FlatTop,
             ImmutableVector2(0f, 0f),
             ImmutableVector2(32f, 32f)
@@ -41,14 +47,22 @@ class Game(val game: KtxGame<KtxScreen>) : KtxScreen {
 
         val map = HexagonalMap(mapLayout, tiles)
         val hexRenderer = HexagonalRenderer(map, ImmutableVector2(32f, 32f))
-        val renderer = LayeredRenderer(map, listOf(
-            TerrainLayer(map, hexRenderer, terrainViews),
-            TileOutlineLayer(hexRenderer, shapeRenderer)
+        val terrainView = TerrainView(
+            getTerrain(0, 0),
+            game.assets[TextureAtlasAssets.Game].findRegion("grass"),
+            Color.RED
+        )
+        val terrainViews: Map<Terrain, TerrainView> = mapOf(getTerrain(0, 0) to terrainView)
+        terrainLayer = TerrainLayer(map, hexRenderer, terrainViews)
+        tileOutlinerLayer = TileOutlineLayer(hexRenderer, ShapeRenderer())
+        renderer = LayeredRenderer(map, listOf(
+            terrainLayer,
+            tileOutlinerLayer
         ), stage.camera as OrthographicCamera)
-        renderer.render(stage.batch as PolygonSpriteBatch)
     }
 
     override fun render(delta: Float) {
+        renderer.render(stage.batch as PolygonSpriteBatch)
 //        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
         stage.act(Gdx.graphics.deltaTime.coerceAtMost(1 / 30f))
         stage.draw()

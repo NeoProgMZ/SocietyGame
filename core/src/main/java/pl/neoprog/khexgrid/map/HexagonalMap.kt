@@ -1,12 +1,12 @@
-package com.darkgravity.khexgrid.map
+package pl.neoprog.khexgrid.map
 
 import com.badlogic.gdx.math.GridPoint2
-import com.darkgravity.khexgrid.delegate.CacheRegistry
-import com.darkgravity.khexgrid.delegate.cache
-import com.darkgravity.khexgrid.math.CubeCoordinate
-import com.darkgravity.khexgrid.math.OffsetCoordinateType
-import com.darkgravity.khexgrid.observer.Observable
-import com.darkgravity.khexgrid.observer.ObservableSubject
+import pl.neoprog.khexgrid.delegate.CacheRegistry
+import pl.neoprog.khexgrid.delegate.cache
+import pl.neoprog.khexgrid.math.CubeCoordinate
+import pl.neoprog.khexgrid.math.OffsetCoordinateType
+import pl.neoprog.khexgrid.observer.Observable
+import pl.neoprog.khexgrid.observer.ObservableSubject
 import ktx.math.ImmutableVector2
 
 /**

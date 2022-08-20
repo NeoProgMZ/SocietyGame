@@ -1,9 +1,9 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.math.Rectangle
 import com.badlogic.gdx.math.Vector2
-import com.darkgravity.khexgrid.math.toVector2
+import pl.neoprog.khexgrid.math.toVector2
 import ktx.math.div
 import ktx.math.minus
 import ktx.math.times

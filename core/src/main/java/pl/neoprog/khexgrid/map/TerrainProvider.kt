@@ -1,4 +1,4 @@
-package com.darkgravity.khexgrid.map
+package pl.neoprog.khexgrid.map
 
 /**
  * @author Dan McCabe

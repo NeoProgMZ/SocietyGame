@@ -1,4 +1,4 @@
-package com.darkgravity.khexgrid.math
+package pl.neoprog.khexgrid.math
 
 import ktx.math.ImmutableVector2
 

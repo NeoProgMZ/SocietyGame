@@ -1,7 +1,8 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import pl.neoprog.khexgrid.render.LayerAdapter
 
 /**
  * @author Dan McCabe

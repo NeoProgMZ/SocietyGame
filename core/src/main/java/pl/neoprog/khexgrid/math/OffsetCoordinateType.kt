@@ -1,6 +1,6 @@
-package com.darkgravity.khexgrid.math
+package pl.neoprog.khexgrid.math
 
-import com.darkgravity.khexgrid.map.HexagonalOrientation
+import pl.neoprog.khexgrid.map.HexagonalOrientation
 
 /**
  * @author Dan McCabe

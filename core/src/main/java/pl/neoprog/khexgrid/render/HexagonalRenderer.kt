@@ -1,13 +1,13 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.*
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.MathUtils
-import com.darkgravity.khexgrid.map.HexagonalMap
-import com.darkgravity.khexgrid.map.HexagonalVertexCache
-import com.darkgravity.khexgrid.math.CubeCoordinate
-import com.darkgravity.khexgrid.math.ceilToInt
+import pl.neoprog.khexgrid.map.HexagonalMap
+import pl.neoprog.khexgrid.map.HexagonalVertexCache
+import pl.neoprog.khexgrid.math.CubeCoordinate
+import pl.neoprog.khexgrid.math.ceilToInt
 import ktx.math.ImmutableVector2
 
 /**

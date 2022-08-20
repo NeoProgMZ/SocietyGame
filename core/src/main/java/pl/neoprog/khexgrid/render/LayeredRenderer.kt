@@ -1,11 +1,11 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch
 import com.badlogic.gdx.math.Rectangle
-import com.darkgravity.khexgrid.map.HexagonalMap
-import com.darkgravity.khexgrid.map.HexagonalTile
-import com.darkgravity.khexgrid.math.toVector2
+import pl.neoprog.khexgrid.map.HexagonalMap
+import pl.neoprog.khexgrid.map.HexagonalTile
+import pl.neoprog.khexgrid.math.toVector2
 import ktx.math.div
 import ktx.math.toMutable
 

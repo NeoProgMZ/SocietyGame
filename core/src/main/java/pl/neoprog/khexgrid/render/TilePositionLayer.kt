@@ -1,12 +1,12 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.graphics.g2d.GlyphLayout
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch
-import com.darkgravity.khexgrid.map.HexagonalMap
-import com.darkgravity.khexgrid.map.HexagonalTile
-import com.darkgravity.khexgrid.math.CubeCoordinate
-import com.darkgravity.khexgrid.math.OffsetCoordinateType
+import pl.neoprog.khexgrid.map.HexagonalMap
+import pl.neoprog.khexgrid.map.HexagonalTile
+import pl.neoprog.khexgrid.math.CubeCoordinate
+import pl.neoprog.khexgrid.math.OffsetCoordinateType
 import ktx.math.ImmutableVector2
 
 /**

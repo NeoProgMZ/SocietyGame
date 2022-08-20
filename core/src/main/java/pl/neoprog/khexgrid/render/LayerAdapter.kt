@@ -1,7 +1,7 @@
-package com.darkgravity.khexgrid.render
+package pl.neoprog.khexgrid.render
 
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch
-import com.darkgravity.khexgrid.map.HexagonalTile
+import pl.neoprog.khexgrid.map.HexagonalTile
 
 /**
  * @author Dan McCabe

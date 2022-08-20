@@ -1,0 +1,20 @@
+
+social-game-tiles.png
+size: 512, 1024
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+Terrain 1 - Flat - Black Outline 1px - 128x128
+  rotate: false
+  xy: 4, 4
+  size: 384, 512
+  orig: 384, 512
+  offset: 0, 0
+  index: -1
+grass
+  rotate: false
+  xy: 268, 268
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

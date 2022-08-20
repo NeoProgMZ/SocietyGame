@@ -1,9 +1,9 @@
-package com.darkgravity.khexgrid.map
+package pl.neoprog.khexgrid.map
 
 import com.badlogic.gdx.math.GridPoint2
 import com.badlogic.gdx.math.Vector3
-import com.darkgravity.khexgrid.math.*
 import ktx.math.ImmutableVector2
+import pl.neoprog.khexgrid.math.*
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin

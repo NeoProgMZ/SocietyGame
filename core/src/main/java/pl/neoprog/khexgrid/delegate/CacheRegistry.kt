@@ -1,4 +1,4 @@
-package com.darkgravity.khexgrid.delegate
+package pl.neoprog.khexgrid.delegate
 
 /**
  * @author Dan McCabe

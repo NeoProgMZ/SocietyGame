@@ -1,8 +1,8 @@
-package com.darkgravity.khexgrid.math
+package pl.neoprog.khexgrid.math
 
 import com.badlogic.gdx.math.Vector3
-import com.darkgravity.khexgrid.map.HexagonalOrientation.FlatTop
-import com.darkgravity.khexgrid.map.HexagonalOrientation.PointyTop
+import pl.neoprog.khexgrid.map.HexagonalOrientation.FlatTop
+import pl.neoprog.khexgrid.map.HexagonalOrientation.PointyTop
 import ktx.math.ImmutableVector2
 import kotlin.math.abs
 import kotlin.math.max

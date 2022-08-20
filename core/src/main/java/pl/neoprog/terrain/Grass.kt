@@ -1,6 +1,6 @@
 package pl.neoprog.terrain
 
-import com.darkgravity.khexgrid.map.Terrain
+import pl.neoprog.khexgrid.map.Terrain
 
 class Grass: Terrain {
     override val id: String = "grass"

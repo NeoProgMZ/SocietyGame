@@ -1,6 +1,6 @@
-package com.darkgravity.khexgrid.map
+package pl.neoprog.khexgrid.map
 
-import com.darkgravity.khexgrid.math.CubeCoordinate
+import pl.neoprog.khexgrid.math.CubeCoordinate
 
 /**
  * @author Dan McCabe

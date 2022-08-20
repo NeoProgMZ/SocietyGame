@@ -1,4 +1,4 @@
-package com.darkgravity.khexgrid.observer
+package pl.neoprog.khexgrid.observer
 
 /**
  * @author Dan McCabe

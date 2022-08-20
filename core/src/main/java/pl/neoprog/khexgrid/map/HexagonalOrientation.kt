@@ -1,8 +1,8 @@
-package com.darkgravity.khexgrid.map
+package pl.neoprog.khexgrid.map
 
-import com.darkgravity.khexgrid.math.CubeCoordinate
-import com.darkgravity.khexgrid.math.Matrix2
-import com.darkgravity.khexgrid.math.OffsetCoordinateType
+import pl.neoprog.khexgrid.math.CubeCoordinate
+import pl.neoprog.khexgrid.math.Matrix2
+import pl.neoprog.khexgrid.math.OffsetCoordinateType
 import ktx.math.ImmutableVector2
 import kotlin.math.sqrt
 
