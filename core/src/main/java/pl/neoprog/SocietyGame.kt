@@ -1,5 +1,7 @@
 package pl.neoprog
 
+import com.badlogic.gdx.Application
+import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.assets.AssetManager
 import com.badlogic.gdx.graphics.g2d.BitmapFont
 import ktx.app.KtxGame
@@ -14,6 +16,7 @@ class SocietyGame : KtxGame<KtxScreen>() {
     val assets = AssetManager()
 
     override fun create() {
+        Gdx.app.setLogLevel(Application.LOG_DEBUG)
         addScreen(Loading(this))
         setScreen<Loading>()
         super.create()
