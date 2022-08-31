@@ -28,7 +28,8 @@ class Game(private val game: SocietyGame) : KtxScreen {
     private val stage: Stage by lazy { stage(viewport = ScreenViewport(), batch = PolygonSpriteBatch()) }
     private val columns: Int = 10
     private val rows: Int = 10
-    private val mapTileSize: ImmutableVector2 = ImmutableVector2(128f, 128f) 
+    private val tileSideSize: Float = 128f
+    private val mapTileSize: ImmutableVector2 = ImmutableVector2(tileSideSize, tileSideSize) 
     private val terrainLayer: TerrainLayer
     private val tileOutlinerLayer: TileOutlineLayer
     private val renderer: LayeredRenderer
@@ -36,22 +37,23 @@ class Game(private val game: SocietyGame) : KtxScreen {
     init {
         val mapLayout = HexagonalLayout(
             HexagonalOrientation.FlatTop,
-            mapTileSize, // lower left corner is the start position
+            ImmutableVector2(tileSideSize, 0f), // lower left corner is the start position
             mapTileSize
         )
-        // FIXME basic terrains and their views should be a closed list. After deciding what terrain to use select it from list.
+        // FIXME basic terrains and their views should be a closed list. After deciding what terrain to use select it from the list.
+        val textureRegion = game.assets[TextureAtlasAssets.Game].findRegion("grass")
         val debugTerrain = getTerrain(0, 0)
         val terrainView = TerrainView(
             debugTerrain,
-            game.assets[TextureAtlasAssets.Game].findRegion("grass"),
+            textureRegion,
             Color.GREEN
         )
         val terrainViews: Map<Terrain, TerrainView> = mapOf(debugTerrain to terrainView)
 
         val tiles = (0 until rows).flatMap { row ->
             (0 until columns).map { column ->
-                // TODO place for terrain selection algorithms
                 val coordinate = OffsetCoordinate(column, row, OffsetCoordinateType(mapLayout.orientation)).toCubeCoordinate()
+                // TODO place for terrain selection algorithms
                 coordinate to HexagonalTile(coordinate, debugTerrain)
             }
         }.toMap()

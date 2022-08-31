@@ -13,15 +13,15 @@ Terrain 1 - Flat - Black Outline 1px - 128x128
   index: -1
 sand
   rotate: false
-  xy: 4, 4
-  size: 128, 128
+  xy: 4, 124
+  size: 1, 1
   orig: 128, 128
   offset: 0, 0
   index: -1
 grass
   rotate: false
-  xy: 260, 260
-  size: 128, 128
+  xy: 260, 376
+  size: 1, 1
   orig: 128, 128
   offset: 0, 0
   index: -1

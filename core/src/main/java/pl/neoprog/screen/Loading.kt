@@ -22,10 +22,11 @@ class Loading(private val game: SocietyGame) : KtxScreen {
         game.assets.update()
 
         stage.batch.use {
-            game.font.draw(it, "Welcome to Drop!!! ", 100f, 150f)
             if (game.assets.isFinished) {
+// TODO show MainMenu screen.
                 game.font.draw(it, "Tap anywhere to begin!", 100f, 100f)
             } else {
+// TODO show spinner image.               
                 game.font.draw(it, "Loading assets...", 100f, 100f)
             }
         }
