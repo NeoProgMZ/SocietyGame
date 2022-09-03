@@ -30,5 +30,5 @@ dependencies {
 	api "io.github.libktx:ktx-vis-style:$ktxVersion"
 	api "io.github.libktx:ktx-vis:$ktxVersion"
 	api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-	api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion"
+	api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
 }
